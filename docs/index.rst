@@ -4,6 +4,8 @@ A python library for interfacing with Infoblox NIOS.
 
 This library is not official, nor is it affiliated with `Infoblox, Inc. <http://www.infoblox.com>`_ in any way.
 
+.. image:: https://travis-ci.org/gmr/infoblox.png?branch=master   :target: https://travis-ci.org/gmr/infoblox
+
 Requirements
 ------------
 Python 2.6, 2.7, 3.2, 3.3
