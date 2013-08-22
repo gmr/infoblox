@@ -2,6 +2,12 @@ infoblox
 ========
 A python library for interfacing with Infoblox NIOS.
 
+[![Build Status](https://travis-ci.org/gmr/infoblox.png?branch=master)](https://travis-ci.org/gmr/infoblox)
+
+Documentation
+-------------
+http://infoblox.readthedocs.org
+
 Requirements
 ------------
 Python 2.6, 2.7, 3.2, 3.3
@@ -38,11 +44,11 @@ CLI Usage
 Library Usage
 -------------
 
-import infoblox
+    import infoblox
 
-obj = infoblox.Infoblox('127.0.0.1', 'admin', 'infoblox')
-if obj.add_new_host('hostname', '10.0.0.1', 'Comment!'):
-    print 'hostname (10.0.0.1) added'
+    obj = infoblox.Infoblox('127.0.0.1', 'admin', 'infoblox')
+    if obj.add_new_host('hostname', '10.0.0.1', 'Comment!'):
+        print 'hostname (10.0.0.1) added'
 
-if obj.delete_old_host('hostname', '10.0.0.1'):
-    print 'hostname (10.0.0.1) removed'
+    if obj.delete_old_host('hostname', '10.0.0.1'):
+        print 'hostname (10.0.0.1) removed'
