@@ -2,6 +2,8 @@ infoblox
 ========
 A python library for interfacing with Infoblox NIOS.
 
+This library is not official, nor is it affiliated with [Infoblox, Inc.](http://www.infoblox.com) in any way.
+
 [![Build Status](https://travis-ci.org/gmr/infoblox.png?branch=master)](https://travis-ci.org/gmr/infoblox)
 
 Documentation
