@@ -1,7 +1,7 @@
 from setuptools import setup
 
 requirements = ['requests']
-tests_require = ['mock']
+tests_require = ['mock', 'httmock']
 try:
     import argparse
 except ImportError:

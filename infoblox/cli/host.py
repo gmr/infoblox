@@ -87,6 +87,7 @@ class Infoblox(object):
                               'name': hostname,
                               'comment': comment or self.comment})
         if response.status_code == 201:
+            LOGGER.info('Ref: %s', response.json())
             return True
         LOGGER.error('Error creating host record: %s', response.content)
         return False
@@ -120,6 +121,10 @@ class Infoblox(object):
 
         """
         response = self._delete(ref)
+        import pprint
+        pprint.pprint(response.status_code)
+        pprint.pprint(response.json())
+
         if response.status_code == 200:
             return True
         LOGGER.error('Error deleting by reference: %s', response.content)
@@ -216,13 +221,6 @@ class Infoblox(object):
         record = self.get_host_from_name(hostname)
         if record:
             LOGGER.info('Deleting host record for %s', hostname)
-            if self.delete_by_ref(record['_ref']):
-                performed_delete = True
-
-        # Search for the ipaddr
-        record = self.get_host_from_ipv4(ipaddress)
-        if record:
-            LOGGER.info('Deleting ipaddr record for %s', ipaddress)
             if self.delete_by_ref(record['_ref']):
                 performed_delete = True
 
@@ -366,3 +364,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+__author__ = 'gmr'
