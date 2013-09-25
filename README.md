@@ -4,7 +4,7 @@ A python library for interfacing with Infoblox NIOS.
 
 This library is not official, nor is it affiliated with [Infoblox, Inc.](http://www.infoblox.com) in any way.
 
-[![Build Status](https://travis-ci.org/gmr/infoblox.png?branch=master)](https://travis-ci.org/gmr/infoblox)
+[![PyPI version](https://badge.fury.io/py/infoblox.png)](http://badge.fury.io/py/infoblox) [![Downloads](https://pypip.in/d/infoblox/badge.png)](https://crate.io/packages/pamqp) [![Build Status](https://travis-ci.org/gmr/infoblox.png?branch=master)](https://travis-ci.org/gmr/infoblox)
 
 Documentation
 -------------
