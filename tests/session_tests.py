@@ -3,7 +3,6 @@ Infoblox Tests
 
 """
 import httmock
-import requests
 try:
     import unittest2 as unittest
 except ImportError:
@@ -18,10 +17,6 @@ class SessionTests(unittest.TestCase):
 
     def setUp(self):
         self.session = session.Session(self.HOST)
-        self.url = 'https://%s/wapi/v1.0/' % self.HOST
-
-    def test_session_url(self):
-        self.assertEqual(self.url, self.session.url)
 
     def test_default_auth(self):
         self.assertEqual(('admin', 'infoblox'), self.session.auth)
@@ -47,7 +42,7 @@ class SessionGetTests(SessionTests):
 
     def setUp(self):
         super(SessionGetTests, self).setUp()
-        self.content = {"name": "foo", "ipv4addr": "127.0.0.1"}
+        self.content = {'name': 'foo', 'ipv4addr': '127.0.0.1'}
 
     @httmock.all_requests
     def get_mock(self, url, request):
@@ -58,5 +53,5 @@ class SessionGetTests(SessionTests):
 
     def test_get(self):
         with httmock.HTTMock(self.get_mock):
-            response = self.session.get('objname', {"name": "foo"})
+            response = self.session.get('objname', {'name': 'foo'})
             self.assertEqual(self.content, response.json())
