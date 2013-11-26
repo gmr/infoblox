@@ -21,36 +21,35 @@ Python 2.6, 2.7, 3.2, 3.3
 CLI Usage
 ---------
 
-    usage: infoblox-host [-h] [-u USERNAME] [-p PASSWORD] [-c COMMENT] [--version]
-                         {add,remove} infobox host address
+    usage: infoblox-host [-h] [--version] [--debug] [-u USERNAME] [-p PASSWORD]
+              <Infoblox Address> {add,remove} <FQDN> [IPv4 Address] [COMMENT]
 
     Add or remove a host from the Infoblox appliance
 
     positional arguments:
-      {add,remove}          The action to take for the host
-      infobox               The Infoblox hostname
-      host                  The FQDN for the host
-      address               The IPv4 address for the host
+      <Infoblox Address>    The Infoblox hostname
+      {add,remove}          Specify if you are adding or removing a host
+      <FQDN>                The FQDN for the host
+      [IPv4 Address]        The IPv4 address for the host
+      [COMMENT]             A comment set on the host when adding.
 
     optional arguments:
       -h, --help            show this help message and exit
+      --version             show program's version number and exit
+      --debug               Enable debug output
       -u USERNAME, --username USERNAME
                             The username to perform the work as. Default: admin
       -p PASSWORD, --password PASSWORD
                             The password to authenticate with. Default: infoblox
-      -c COMMENT, --comment COMMENT
-                            A comment to use when performing the action. Default:
-                            Created by python with love
-      --version             show program's version number and exit
 
 Library Usage
 -------------
 
     import infoblox
 
-    obj = infoblox.Infoblox('127.0.0.1', 'admin', 'infoblox')
-    if obj.add_new_host('hostname', '10.0.0.1', 'Comment!'):
-        print 'hostname (10.0.0.1) added'
-
-    if obj.delete_old_host('hostname', '10.0.0.1'):
-        print 'hostname (10.0.0.1) removed'
+    session = infoblox.Session('127.0.0.1', 'admin', 'infoblox')
+    host = infoblox.Host(session)
+    host.name = 'foo.bar.net'
+    host.add_ipv4addr('10.0.0.1')
+    if host.save():
+        print('Host saved')
