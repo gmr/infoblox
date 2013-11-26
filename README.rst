@@ -1,10 +1,8 @@
 infoblox
 ========
-A python library for interfacing with Infoblox NIOS.
+An unofficial python library for interfacing with Infoblox NIOS. This library is not affiliated with _`Infoblox, Inc. <http://www.infoblox.com>` in any way.
 
-This library is not official, nor is it affiliated with [Infoblox, Inc.](http://www.infoblox.com) in any way.
-
-[![PyPI version](https://badge.fury.io/py/infoblox.png)](http://badge.fury.io/py/infoblox) [![Downloads](https://pypip.in/d/infoblox/badge.png)](https://crate.io/packages/pamqp) [![Build Status](https://travis-ci.org/gmr/infoblox.png?branch=master)](https://travis-ci.org/gmr/infoblox)
+|PyPI version| |Downloads| |Build Status|
 
 Documentation
 -------------
@@ -12,11 +10,9 @@ http://infoblox.readthedocs.org
 
 Requirements
 ------------
-Python 2.6, 2.7, 3.2, 3.3
-
-### External dependencies
-- [argparse](http://pypi.python.org/pypi/argparse) (Python 2.6 only)
-- [requests](http://docs.python-requests.org/en/latest/)
+- Python 2.6, 2.7, 3.2, 3.3
+- _`argparse <http://pypi.python.org/pypi/argparse>` (Python 2.6 only)
+- _`requests <http://docs.python-requests.org/en/latest/>`
 
 CLI Usage
 ---------
@@ -44,6 +40,7 @@ CLI Usage
 
 Library Usage
 -------------
+::python
 
     import infoblox
 
@@ -53,3 +50,11 @@ Library Usage
     host.add_ipv4addr('10.0.0.1')
     if host.save():
         print('Host saved')
+
+
+.. |PyPI version| image:: https://badge.fury.io/py/infoblox.png
+   :target: http://badge.fury.io/py/infoblox
+.. |Downloads| image:: https://pypip.in/d/infoblox/badge.png
+   :target: https://crate.io/packages/infoblox
+.. |Build Status| image:: https://travis-ci.org/gmr/infoblox.png?branch=master
+   :target: https://travis-ci.org/gmr/infoblox
