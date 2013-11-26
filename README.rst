@@ -16,6 +16,7 @@ Requirements
 
 CLI Usage
 ---------
+.. code:: bash
 
     usage: infoblox-host [-h] [--version] [--debug] [-u USERNAME] [-p PASSWORD]
               <Infoblox Address> {add,remove} <FQDN> [IPv4 Address] [COMMENT]
@@ -40,7 +41,7 @@ CLI Usage
 
 Library Usage
 -------------
-::python
+.. code:: python
 
     import infoblox
 
