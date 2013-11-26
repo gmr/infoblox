@@ -26,7 +26,7 @@ classifiers = ['Intended Audience :: Developers',
                'Topic :: System :: Systems Administration']
 
 setup(name='infoblox',
-      version='1.1.0',
+      version='1.1.1',
       description='Interface and CLI application for Infoblox NIOS',
       long_description=open('README.rst').read(),
       author='Gavin M. Roy',

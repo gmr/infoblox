@@ -88,7 +88,7 @@ def main():
                         help='The password to authenticate with. '
                              'Default: %s' % PASSWORD)
     parser.add_argument('action',
-                        choices={'add', 'remove'},
+                        choices=['add', 'remove'],
                         help='Specify if you are adding or removing a host')
     parser.add_argument('host',
                         metavar='<FQDN>',
