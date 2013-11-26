@@ -73,10 +73,9 @@ def main():
     parser.add_argument('--debug',
                         action='store_true',
                         help='Enable debug output')
-    parser.add_argument('-i', '--infoblox',
+    parser.add_argument('infoblox',
                         metavar='<Infoblox Address>',
                         action='store',
-                        required=True,
                         help='The Infoblox hostname')
     parser.add_argument('-u', '--username',
                         default=USERNAME,
@@ -88,10 +87,8 @@ def main():
                         action='store',
                         help='The password to authenticate with. '
                              'Default: %s' % PASSWORD)
-
-    parser.add_argument('-a', '--action',
+    parser.add_argument('action',
                         choices={'add', 'remove'},
-                        required=True,
                         help='Specify if you are adding or removing a host')
     parser.add_argument('host',
                         metavar='<FQDN>',

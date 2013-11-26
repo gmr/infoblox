@@ -1,4 +1,4 @@
-__author__ = 'gmr'
+__version__ = '0.1.0'
 
 from infoblox.session import Session
 
