@@ -2,6 +2,8 @@ infoblox
 ========
 An unofficial python library for interfacing with Infoblox NIOS. This library is not affiliated with _`Infoblox, Inc. <http://www.infoblox.com>` in any way.
 
+:boom:**Important**:boom: This project is deprecated and no longer maintained. If you'd like to take it over, please contact me.
+
 |PyPI version| |Downloads| |Build Status|
 
 Documentation
